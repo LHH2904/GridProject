@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .wrapper>div {
+            background-color: #F4D5AB;
+            border: 2px solid #E9AB58;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .one {
+            /* grid-column: 1 / 3; */
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /* hoặc có thể viết */
+            /* grid-column-start: 1;
+            grid-column-end: span 3; */
+            /* item one bắt đầu ở cột thứ 1, và tự động giãn ra thành 3 cột */
+            /* hoăc có thể viết */
+            grid-column: 1/ span 3;
+            grid-row: 1;
+        }
+
+        .two {
+            grid-column: 2 / 4;
+            grid-row: 1 / 3;
+        }
+
+        .three {
+            grid-column: 1;
+            grid-row: 2 / 5;
+        }
+
+        .four {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        .five {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .six {
+            grid-column: 3;
+            grid-row: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <p>grid-template-columns sẽ tương ứng với số cột, các giá trị sẽ tương ứng với chiều rộng của các cột lần lượt từ
+        trái sang phải</p>
+    <div class="wrapper">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+        <div class="five">Five</div>
+        <div class="six">Six</div>
+    </div>
+</body>
+
+</html>

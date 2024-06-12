@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 40px 4em 40px; */
+        /* grid-template-rows: 1fr 2fr 1fr; */
+        grid-template-rows: 3ch auto minmax(10px, 60px);
+        /* grid-template-rows này cung cấp một cách linh hoạt để kiểm soát chiều cao của các hàng trong bố cục lưới, cho phép chúng thích ứng với kích thước nội dung khác nhau trong khi vẫn duy trì chiều cao tối thiểu và tối đa cho mỗi hàng. */
+    }
+
+    #areaA {
+        background-color: lime;
+    }
+
+    #areaB {
+        background-color: yellow;
+    }
+
+    #areaC {
+        background-color: rgb(13, 155, 216);
+    }
+
+    #areaD {
+        background-color: rgb(129, 88, 243);
+    }
+
+    #areaE {
+        background-color: rgb(232, 190, 66);
+    }
+</style>
+
+<body>
+    <div id="grid">
+        <div id="areaA">A</div>
+        <div id="areaB">B</div>
+        <div id="areaC">C</div>
+        <div id="areaD">D</div>
+        <div id="areaE">E <br>
+            sdhjshdjsh</div>
+    </div>
+</body>
+
+</html>

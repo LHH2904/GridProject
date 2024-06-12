@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #grid {
+        display: grid;
+        grid-template-areas:
+            "H H"
+            "A B"
+            "F F";
+
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 30px;
+
+
+    }
+
+
+    #grid>div {
+        border: 1px solid #545454;
+        border-radius: 5px;
+    }
+
+    /* The grid-area property places a grid item into a named
+ * area of the grid. */
+    #H {
+        grid-area: H;
+    }
+
+    #A {
+        grid-area: A;
+    }
+
+    #B {
+        grid-area: B;
+    }
+
+    #F {
+        grid-area: F;
+    }
+</style>
+
+<body>
+    <div id="grid">
+        <div id="H">Game Title</div>
+        <div id="A">Score</div>
+        <div id="B">Stats</div>
+        <div id="F">Board</div>
+    </div>
+</body>
+
+</html>

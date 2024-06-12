@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 50px 1fr 50px;
+        background-color: beige;
+        height: 250px;
+    }
+
+    #item1 {
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    đoạn này ta thấy thẻ #grid chỉ được chia làm 2 hàng và 2 cột không như mong muốn là 3 hàng
+    là do chưa rõ ràng chiều cao của thẻ #grid (vùng chứa) nên tổng chiều cao thẻ #grid chỉ là 100px
+    <div id="grid">
+        <div id="item1">Game Title</div>
+    </div>
+</body>
+
+</html>
